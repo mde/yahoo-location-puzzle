@@ -1,0 +1,128 @@
+<html>
+
+  <head>
+    <style type="text/css">
+      body, form {
+        padding: 0;
+        margin: 0;
+        font-family: 'Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', Helvetica-, Arial, sans-serif;
+        font-size: 18px;
+      }
+      a {
+        color: #77c;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #77e;
+        text-decoration: underline;
+      }
+      .search-header {
+        padding: 8px 12px;
+        margin: 0;
+        height: 56px;
+        background: #eee;
+        border-bottom: 1px solid #ccc;
+        width: 100%;
+        top: 0;
+        position: fixed;
+      }
+      .search-results {
+        margin-top: 72px; /* search bar area, 56 + 16 padding */
+      }
+
+      input {
+        width: 280x;
+        height: 56px;
+        text-align: left;
+        vertical-align: middle;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 12px;
+        font-size: 24px;
+        color: #333;
+      }
+      input:focus {
+        outline: 2px solid #ccf;
+      }
+      input.btn {
+        background-color: #ccc;
+        color: #fff;
+      }
+      input.btn:hover {
+        background-color: #aaa;
+      }
+      input.btn:active {
+        background-color: #aaa;
+      }
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        margin-bottom: 0;
+        padding: 12px;
+        border-bottom: 1px solid #ddd;
+      }
+      .search-results h3 {
+        font-weight: normal;
+        font-size: 18px;
+        margin: 0 0 2px 0;
+        padding: 0;
+      }
+      div.summary {
+        font-size: 14px;
+        color: #999;
+        margin-bottom: 6px;
+      }
+      div.summary span.rating-count {
+        font-style: italic;
+      }
+      div.first-rating {
+        color: #555;
+        font-size: 14px;
+        max-height: 18px;
+        line-height: 18px;
+        vertical-align: middle;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        margin-bottom: 4px;
+      }
+      div.info {
+        color: #999;
+        font-size: 14px;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div class="search-header" style="">
+      <form class="search-form">
+        <input type="text" name="thing" placeholder="What" value="pizza"/>
+        <input type="text" name="place" placeholder="Where" value="Pacifica, CA"/>
+        <input type="button" value="Search" class="btn"/>
+      </form>
+    </div>
+    <div class="search-results" style="">
+    </div>
+  </body>
+
+  <script type="text/javascript" src="js/mustache.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+  <script type="text/javascript">
+    (function () {
+      var search = new LocationSearch(document.querySelector('.search-form'),
+              document.querySelector('.search-results'));
+      /*
+      data.fetch('pizza', 'Pacifica, CA', function (err, data) {
+        console.log(arguments);
+      });
+      */
+    })();
+
+  </script>
+
+
+</html>
