@@ -1,0 +1,150 @@
+body, form {
+  padding: 0;
+  margin: 0;
+  font-family: 'Gotham SSm A', 'Gotham SSm B', 'Helvetica Neue', Helvetica-, Arial, sans-serif;
+  font-size: 18px;
+}
+a, .nav {
+  color: #44c;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover, .nav:hover {
+  color: #77e;
+  text-decoration: underline;
+}
+.search-header {
+  padding: 8px 12px;
+  margin: 0;
+  height: 56px;
+  background: #eee;
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  top: 0;
+  position: fixed;
+}
+.search-results {
+  margin-top: 72px; /* search bar area, 56 + 16 padding */
+}
+
+input {
+  width: 280x;
+  height: 56px;
+  text-align: left;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 12px;
+  font-size: 24px;
+  color: #333;
+}
+input:focus {
+  outline: 2px solid #ccf;
+}
+input.btn {
+  background-color: #ccc;
+  color: #fff;
+}
+input.btn:hover {
+  background-color: #aaa;
+}
+input.btn:active {
+  background-color: #aaa;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+li {
+  margin-bottom: 0;
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+.search-results h3 {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 0 2px 0;
+  padding: 0;
+  color: #444;
+}
+div.summary {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 2px;
+}
+div.summary span.rating-count {
+  font-style: italic;
+}
+div.info {
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+div.first-rating {
+  color: #555;
+  font-size: 14px;
+  max-height: 18px;
+  line-height: 18px;
+  vertical-align: middle;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 6px;
+}
+div.review {
+  font-size: 14px;
+}
+div.error {
+  padding-top: 36px;
+  width: 100%;
+  text-align: center;
+  color: #d66;
+}
+div.no-results {
+  padding-top: 36px;
+  width: 100%;
+  text-align: center;
+  color: #999;
+}
+div.next-page {
+  font-size 18px;
+  padding: 8px 24px;
+  text-align: right;
+}
+span.next-icon {
+  font-size: 28px;
+}
+div.progress {
+  text-align: center;
+  padding-top: 36px;
+}
+
+/* Minimal responsive fu */
+@media only screen
+and (max-width : 700px) {
+  input {
+    margin-bottom: 12px;
+  }
+  .search-header {
+    height: 124px;
+  }
+  .search-results {
+    margin-top: 140px;
+  }
+}
+
+@media only screen
+and (max-width : 600px) {
+  input {
+    width: 94%;
+    margin-bottom: 12px;
+  }
+  .search-header {
+    height: 192px;
+  }
+  .search-results {
+    margin-top: 208px;
+  }
+}
+
